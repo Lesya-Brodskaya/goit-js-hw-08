@@ -31,10 +31,11 @@ function populateTextarea() {
     if (savedKey) {
       const formKeys = Object.keys(formData);
       formKeys.map(element => {
-        document.querySelector(`[name='${element}']`).value = parseData[element];
+        document.querySelector(`[name='${element}']`).value =
+          parseData[element];
       });
     }
   } catch (error) {
     console.log(error.name);
   }
-};
+}
