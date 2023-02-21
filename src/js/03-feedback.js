@@ -27,15 +27,15 @@ function onInput(evt) {
 
 function populateTextarea() {
   try {
-    const parseData = JSON.parse(savedKey);
     if (savedKey) {
-      const formKeys = Object.keys(formData);
-      formKeys.map(element => {
-        document.querySelector(`[name='${element}']`).value =
-          parseData[element];
+      const parseData = JSON.parse(savedKey);
+      const formKeys = Object.entries(parseData);
+      formKeys.forEach(({ name, value }) => {
+        form[name];
       });
     }
   } catch (error) {
-    console.log(error.name);
+      console.log(error.name);
+    
   }
-}
+};
