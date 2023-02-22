@@ -30,7 +30,7 @@ function populateTextarea() {
     if (savedKey) {
       const parseData = JSON.parse(savedKey);
       const formKeys = Object.entries(parseData);
-      formKeys.forEach(({ name, value }) => {
+      formKeys.forEach(([name, value ]) => {
         form[name];
       });
     }
