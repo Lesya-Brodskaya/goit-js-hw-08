@@ -22,8 +22,8 @@ function onFormInput(evt) {
 }
 
 function populateTextarea() {
+  let formData = localStorage.getItem(STORAGE_KEY);
   if (formData) {
-    let formData = localStorage.getItem(STORAGE_KEY);
     try {
       formData = JSON.parse(formData);
       Object.entries(formData).forEach(([name, value]) => {
